@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFilm.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,31 @@ namespace MyFilm.Pages
     /// </summary>
     public partial class ViewPage : Page
     {
+        private readonly FilmContext _сontext;
         public ViewPage()
         {
+            _сontext = new FilmContext();
             InitializeComponent();
+        }
+
+        private void Label_MouseDown_Watch(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Pages/MoviePage.xaml", UriKind.Relative));
+        }
+
+        private void Label_MouseDown_Watch1(object sender, MouseButtonEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Pages/MoviePage.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_AddFilm(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Pages/AddFilmPage.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click_Exit(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("Pages/StartPage.xaml", UriKind.Relative));
         }
     }
 }

@@ -10,14 +10,16 @@
     <Grid Background="#FF222222">
         <Frame Name="frame1"></Frame>
         <Border BorderThickness="1" HorizontalAlignment="Left" Height="502" Margin="150,130,0,0" VerticalAlignment="Top" Width="502" Background="#FF292929">
-            <TextBox HorizontalAlignment="Left" Height="36" Margin="161,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Background="#FF222222" BorderBrush="{x:Null}" Foreground="DarkGray"/>
         </Border>
         
         <Label Content="Регистрация" HorizontalAlignment="Left" Height="38" Margin="335,130,0,0" VerticalAlignment="Top" Width="131" FontSize="20" Foreground="DarkGray"/>
-        <Label Content="Логин" HorizontalAlignment="Left" Height="30" Margin="314,263,0,0" VerticalAlignment="Top" Width="84" FontSize="18" Foreground="DarkGray"/>
-        <Label Content="Номер телефона" HorizontalAlignment="Left" Height="35" Margin="314,350,0,0" VerticalAlignment="Top" Width="152" FontSize="18" Foreground="DarkGray"/>
-        <TextBox HorizontalAlignment="Left" Height="36" Margin="314,390,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164" Background="#FF222222" BorderBrush="{x:Null}" Foreground="DarkGray"/>
-        
+        <Label Content="Логин" HorizontalAlignment="Left" Height="30" Margin="314,199,0,0" VerticalAlignment="Top" Width="84" FontSize="18" Foreground="DarkGray"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="314,234,0,0" TextWrapping="Wrap" Name="logintext" Text="" VerticalAlignment="Top" Width="164" Background="#FF222222" BorderBrush="{x:Null}" Foreground="DarkGray"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Height="35" Margin="314,288,0,0" VerticalAlignment="Top" Width="152" FontSize="18" Foreground="DarkGray"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="314,328,0,0" TextWrapping="Wrap" Name="passwordtext" Text="" VerticalAlignment="Top" Width="164" Background="#FF222222" BorderBrush="{x:Null}" Foreground="DarkGray"/>
+        <Label Content="Номер телефона" HorizontalAlignment="Left" Height="35" Margin="314,376,0,0" VerticalAlignment="Top" Width="152" FontSize="18" Foreground="DarkGray"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="314,416,0,0" TextWrapping="Wrap" Name="phonenumbertext" Text="" VerticalAlignment="Top" Width="164" Background="#FF222222" BorderBrush="{x:Null}" Foreground="DarkGray"/>
+
         <Button Content="Далее" Foreground="DarkGray" HorizontalAlignment="Left" Margin="504,511,0,0" VerticalAlignment="Top" Width="100" Height="50" BorderBrush="#FF363636" Background="#FF222222" Click="Button_Click_Next"/>
         <Button Content="Вернуться" Foreground="DarkGray" HorizontalAlignment="Left" Margin="202,511,0,0" VerticalAlignment="Top" Width="100" Height="50" BorderBrush="#FF363636" Background="#FF222222" Click="Button_Click_Back"/>
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFilm.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,14 +21,26 @@ namespace MyFilm
     /// </summary>
     public partial class StartPage : Page
     {
+        private readonly FilmContext _context;
         public StartPage()
         {
+            _context = new FilmContext();
             InitializeComponent();
         }
 
         private void Button_Click_Start(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Pages/ViewPage.xaml", UriKind.Relative));
+           var user = _context.Users.Where(x => x.Login == logintext.Text && x.Password == passwordtext.Text).FirstOrDefault();
+            if (user!= null)
+            {
+                NavigationService.Navigate(new Uri("Pages/ViewPage.xaml", UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("User Not Found");
+
+            }
+            
         }
 
         private void Label_MouseDown_Registr(object sender, MouseButtonEventArgs e)

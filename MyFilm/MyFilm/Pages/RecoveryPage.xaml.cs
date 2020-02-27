@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFilm.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,10 @@ namespace MyFilm.Pages
     /// </summary>
     public partial class RecoveryPage : Page
     {
+        private readonly FilmContext _сontext;
         public RecoveryPage()
         {
+            _сontext = new FilmContext();
             InitializeComponent();
         }
 
