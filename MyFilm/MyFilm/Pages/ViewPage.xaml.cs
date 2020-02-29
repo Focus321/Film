@@ -66,6 +66,7 @@ namespace MyFilm.Pages
                 timeFilmLable.Content = item.FilmTime;
                 actorFilmLable.Content = item.FilmActor;
                 aboutFilmLable.Content = item.FilmAbout;
+
                 mainFilmGrid.Children.Add(grid);
             }
         }
