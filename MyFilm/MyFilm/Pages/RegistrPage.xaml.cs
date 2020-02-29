@@ -39,7 +39,6 @@ namespace MyFilm.Pages
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("Pages/StartPage.xaml", UriKind.Relative));
-
         }
     }
 }

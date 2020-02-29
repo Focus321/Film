@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="800"
-    Title="ViewPage" MaxHeight="800" MaxWidth="800" MinHeight="800" MinWidth="800" >
+    Title="ViewPage" MaxHeight="800" MaxWidth="800" MinHeight="800" MinWidth="800" Loaded="Page_Loaded" >
 
     <Grid Background="#FF222222">
         <Grid.RowDefinitions>
@@ -53,42 +53,44 @@
         <Label Content="Фэнтези" HorizontalAlignment="Left" Margin="39,495,0,0" Grid.Row="2" VerticalAlignment="Top" Height="28" Width="59" FontSize="13" Background="#FF222222" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
         <Label Content="Фантастика" HorizontalAlignment="Left" Margin="39,523,0,0" Grid.Row="2" VerticalAlignment="Top" Height="28" Width="77" FontSize="13" Background="#FF222222" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
 
-        <Grid Grid.Column="1" Grid.Row="2" >
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-            </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="1" Grid.Row="2">
+            <StackPanel Name="mainFilmGrid" >
+                <Grid Name="filmGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
 
+                    <Label Content="Название Фильма:" Background="#FF292929" Foreground="#FFC0C0C5" BorderThickness="1" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="117" MouseDown="Label_MouseDown_Watch1"/>
+                    <Label Content="Год:" Grid.Column="0" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Content="Страна:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Content="Жанр:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Content="Режисер:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="65" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Content="В ролях:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Content="Длительность:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Width="103" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Content="Про фильм:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" Width="85" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
 
-
-            <Label Content="Название Фильма:" Background="#FF292929" Foreground="#FFC0C0C5" BorderThickness="1" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="117" MouseDown="Label_MouseDown_Watch1"/>
-            <Label Content="Год:" Grid.Column="0" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Страна:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Жанр:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Режисер:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="65" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="В ролях:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Длительность:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Width="103" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Про фильм:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" Width="85" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-
-            <Label Content="Название Фильма:" Background="#FF292929" Foreground="#FFC0C0C5" BorderThickness="1" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="117" MouseDown="Label_MouseDown_Watch1"/>
-            <Label Content="Год:" Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Страна:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Жанр:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Режисер:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="65" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="В ролях:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Длительность:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Width="103" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="Про фильм:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" Width="85" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
-            <Label Content="StarParadise" HorizontalAlignment="Left" Margin="-143,-129,0,0" VerticalAlignment="Top" Height="40" Width="129" FontSize="22" Grid.Column="0" Background="#FF222222" BorderBrush="#FF302D2D" Foreground="DarkGray" />
-        </Grid>
+                    <Label Name = "nameFilmLable" Content="Название Фильма:" Background="#FF292929" Foreground="#FFC0C0C5" BorderThickness="1" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="117" MouseDown="Label_MouseDown_Watch1"/>
+                    <Label Name = "yearFilmLable"  Content="Год:" Grid.Column="1" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Name = "countryFilmLable" Content="Страна:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Name = "genreFilmLable" Content="Жанр:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Name = "directorFilmLable" Content="Режисер:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="65" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Name = "actorFilmLable" Content="В ролях:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Name = "timeFilmLable" Content="Длительность:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="6" VerticalAlignment="Top" Width="103" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Name = "aboutFilmLable" Content="Про фильм:" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="7" VerticalAlignment="Top" Width="85" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Content="StarParadise" HorizontalAlignment="Left" Margin="-143,-129,0,0" VerticalAlignment="Top" Height="40" Width="129" FontSize="22" Grid.Column="0" Background="#FF222222" BorderBrush="#FF302D2D" Foreground="DarkGray" />
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

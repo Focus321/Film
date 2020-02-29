@@ -18,5 +18,6 @@ namespace MyFilm.Models
         public string FilmTime { get; set; }
         public string FilmAbout { get; set; }
         public string FilmImage { get; set; }
+        public string FilmPath { get; set; }
     }
 }

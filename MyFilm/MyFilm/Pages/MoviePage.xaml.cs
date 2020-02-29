@@ -30,11 +30,23 @@ namespace MyFilm.Pages
             player.Source = new Uri("http://www.onirikal.com/videos/mp4/audi_a7.mp4");
             player.LoadedBehavior = MediaState.Manual;
             player.Play();
+
+
         }
 
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("Pages/ViewPage.xaml", UriKind.Relative));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //  player.Source = new Uri("http://www.onirikal.com/videos/mp4/audi_a7.mp4");
+
+
+            //fullViewMedia.Source = new Uri("http://www.onirikal.com/videos/mp4/audi_a7.mp4");
+
+            //fullViewMedia.Visibility = Visibility.Visible;
         }
     }
 }

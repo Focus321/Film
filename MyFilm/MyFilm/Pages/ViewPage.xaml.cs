@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Linq;
 
 namespace MyFilm.Pages
 {
@@ -46,6 +47,27 @@ namespace MyFilm.Pages
         private void Button_Click_Exit(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("Pages/StartPage.xaml", UriKind.Relative));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var muvies = _сontext.Movies.ToList();
+
+            foreach (var item in muvies)
+            {
+                var grid = new Grid();
+                grid = filmGrid;
+                (grid.Parent as StackPanel).Children.Remove(grid);
+                nameFilmLable.Content = item.FilmName;
+                yearFilmLable.Content = item.FilmYear;
+                countryFilmLable.Content = item.FilmYear;
+                genreFilmLable.Content = item.FilmGenre;
+                directorFilmLable.Content = item.FilmDirector;
+                timeFilmLable.Content = item.FilmTime;
+                actorFilmLable.Content = item.FilmActor;
+                aboutFilmLable.Content = item.FilmAbout;
+                mainFilmGrid.Children.Add(grid);
+            }
         }
     }
 }

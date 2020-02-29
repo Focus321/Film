@@ -29,11 +29,12 @@ namespace MyFilm.Pages
             _context = new FilmContext();
             InitializeComponent();
         }
+        string imagePath;
 
         private async void Button_Click_Next(object sender, RoutedEventArgs e)
         {
-            var movie = _context.Movies.Add(new Movie() { FilmName = namefilmtext.Text, FilmYear = yearfilmtext.Text, FilmCountry = countryfilmtext.Text, FilmGenre = genrefilmtext.Text, FilmDirector = directorfilmtext.Text, FilmActor = actorfilmtext.Text, FilmTime = timefilmtext.Text, FilmAbout = aboutfilmtext.Text}); 
-               await _context.SaveChangesAsync();
+            var movie = _context.Movies.Add(new Movie() { FilmName = namefilmtext.Text, FilmYear = yearfilmtext.Text, FilmCountry = countryfilmtext.Text, FilmGenre = genrefilmtext.Text, FilmDirector = directorfilmtext.Text, FilmActor = actorfilmtext.Text, FilmTime = timefilmtext.Text, FilmAbout = aboutfilmtext.Text });
+            await _context.SaveChangesAsync();
             NavigationService.Navigate(new Uri("Pages/ViewPage.xaml", UriKind.Relative));
         }
 
@@ -45,8 +46,30 @@ namespace MyFilm.Pages
         private void Button_Click_AddImage(object sender, RoutedEventArgs e)
         {
             User user = new User();
-            if (OpenFileDialog.ShowDialog() == true)
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            if (fileDialog.ShowDialog() == true)
+            {
+                var path = fileDialog.FileName;
+                imagePath = path;
+            }
 
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            var muvie = new Movie();
+            muvie.FilmAbout = aboutfilmtext.Text;
+            muvie.FilmActor = actorfilmtext.Text;
+            muvie.FilmCountry = countryfilmtext.Text;
+            muvie.FilmDirector = directorfilmtext.Text;
+            muvie.FilmGenre = genrefilmtext.Text;
+            muvie.FilmImage = imagePath;
+            muvie.FilmPath = pathfilmtext.Text;
+            muvie.FilmTime = timefilmtext.Text;
+            muvie.FilmYear = yearfilmtext.Text;
+
+            _context.Movies.Add(muvie);
+            _context.SaveChanges();
         }
     }
 }

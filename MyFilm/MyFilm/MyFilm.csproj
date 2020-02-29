@@ -70,6 +70,9 @@
     <Compile Include="Pages\AddFilmPage.xaml.cs">
       <DependentUpon>AddFilmPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\FullViewPage.xaml.cs">
+      <DependentUpon>FullViewPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MoviePage.xaml.cs">
       <DependentUpon>MoviePage.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Pages\AddFilmPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FullViewPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

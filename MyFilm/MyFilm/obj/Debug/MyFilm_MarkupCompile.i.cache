@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\student.ITSTEP1\Desktop\Project_F\MyFilm\MyFilm\obj\Debug\
+D:\Проэкты\Films\MyFilm\MyFilm\obj\Debug\
 MyFilm
 none
 false
 DEBUG;TRACE
-C:\Users\student.ITSTEP1\Desktop\Project_F\MyFilm\MyFilm\App.xaml
-7-457524496
+D:\Проэкты\Films\MyFilm\MyFilm\App.xaml
+82062519700
 
-15-50633829
-18350333986
-MainWindow.xaml;Pages\AddFilmPage.xaml;Pages\MoviePage.xaml;Pages\RecoveryPage.xaml;Pages\RegistrPage.xaml;Pages\StartPage.xaml;Pages\ViewPage.xaml;
+16-636467371
+181605229343
+MainWindow.xaml;Pages\AddFilmPage.xaml;Pages\FullViewPage.xaml;Pages\MoviePage.xaml;Pages\RecoveryPage.xaml;Pages\RegistrPage.xaml;Pages\StartPage.xaml;Pages\ViewPage.xaml;
 
-False
+True
 
