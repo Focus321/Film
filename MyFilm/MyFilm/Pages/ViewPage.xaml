@@ -53,7 +53,7 @@
         <Label Content="Фэнтези" HorizontalAlignment="Left" Margin="39,495,0,0" Grid.Row="2" VerticalAlignment="Top" Height="28" Width="59" FontSize="13" Background="#FF222222" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
         <Label Content="Фантастика" HorizontalAlignment="Left" Margin="39,523,0,0" Grid.Row="2" VerticalAlignment="Top" Height="28" Width="77" FontSize="13" Background="#FF222222" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
 
-        <ScrollViewer Grid.Column="1" Grid.Row="2">
+        <ScrollViewer Grid.Column="1" Grid.Row="2" >
             <StackPanel Name="mainFilmGrid" >
                 <Grid Name="filmGrid">
                     <Grid.RowDefinitions>
@@ -71,8 +71,8 @@
                         <ColumnDefinition ></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Label Content="Название Фильма:" Background="#FF292929" Foreground="#FFC0C0C5" BorderThickness="1" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="117" MouseDown="Label_MouseDown_Watch1"/>
-                    <Label Content="Год:" Grid.Column="0" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
+                    <Label Content="Название Фильма:" Background="#FF292929" Foreground="#FFC0C0C5"  Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="30" Width="120" MouseDown="Label_MouseDown_Watch1"/>
+                    <Label Content="Год:" Grid.Column="0" HorizontalAlignment="Left"  Grid.Row="1" VerticalAlignment="Top" Width="50" FontSize="13" Background="#FF292929"  Foreground="DarkGray"/>
                     <Label Content="Страна:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="58" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
                     <Label Content="Жанр:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Top" Width="50" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>
                     <Label Content="Режисер:" Grid.Column="0" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Top" Width="65" FontSize="13" Height="27" Background="#FF292929" BorderBrush="#FF302D2D" Foreground="DarkGray"/>

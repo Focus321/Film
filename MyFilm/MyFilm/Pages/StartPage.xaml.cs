@@ -30,8 +30,8 @@ namespace MyFilm
 
         private void Button_Click_Start(object sender, RoutedEventArgs e)
         {
-           var user = _context.Users.Where(x => x.Login == logintext.Text && x.Password == passwordtext.Text).FirstOrDefault();
-            if (user!= null)
+            var user = _context.Users.Where(x => x.Login == logintext.Text && x.Password == passwordtext.Text).FirstOrDefault();
+            if (user != null)
             {
                 NavigationService.Navigate(new Uri("Pages/ViewPage.xaml", UriKind.Relative));
             }
@@ -39,7 +39,7 @@ namespace MyFilm
             {
                 MessageBox.Show("User Not Found");
             }
-            
+
         }
 
         private void Label_MouseDown_Registr(object sender, MouseButtonEventArgs e)
