@@ -32,6 +32,7 @@ namespace MyFilm.Pages
         private void Label_MouseDown_Watch(object sender, MouseButtonEventArgs e)
         {
             NavigationService.Navigate(new Uri("Pages/MoviePage.xaml", UriKind.Relative));
+
         }
 
         private void Label_MouseDown_Watch1(object sender, MouseButtonEventArgs e)
