@@ -52,11 +52,11 @@ namespace MyFilm.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            var muvies = _сontext.Movies.ToList();  
+            var muvies = _сontext.Movies.ToList();
 
             foreach (var item in muvies)
             {
-                var grid = new Grid() { Margin  = new Thickness(0,20,0,0) };
+                var grid = new Grid() { Margin = new Thickness(0, 20, 0, 0) };
 
                 grid.RowDefinitions.Add(new RowDefinition());
                 grid.RowDefinitions.Add(new RowDefinition());
@@ -67,21 +67,28 @@ namespace MyFilm.Pages
                 grid.RowDefinitions.Add(new RowDefinition());
                 grid.RowDefinitions.Add(new RowDefinition());
 
-                grid.ColumnDefinitions.Add(new ColumnDefinition() { Width =new GridLength(0.5, GridUnitType.Star) });
+                grid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(0.5, GridUnitType.Star) });
                 grid.ColumnDefinitions.Add(new ColumnDefinition());
+
+                var img = new Image() { Source = new BitmapImage(new Uri(item.FilmImage)), Width = 100, Height = 100, HorizontalAlignment = HorizontalAlignment.Left };
+
+                grid.Children.Add(img);
+                Grid.SetRow(img, 1);
+                Grid.SetRowSpan(img, 7);
+
 
                 var backgraung = ((Brush)(new BrushConverter()).ConvertFrom("#FF292929"));
                 var foregraung = ((Brush)(new BrushConverter()).ConvertFrom("#FFC0C0C5"));
 
-                var nameLable = new Label() {Content = "Название Фильма:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
-                var yearLable = new Label() {Content = "Год:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
-                var countryLable = new Label() {Content = "Страна:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
-                var genreLable = new Label() {Content = "Жанр:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
-                var directorLable = new Label() {Content = "Режисер:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
-                var actorsLable = new Label() {Content = "В ролях:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
-                var timesLable = new Label() {Content = "Длительность:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
-                var aboutLable = new Label() {Content = "Про фильм:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
-
+                var nameLable = new Label() { Content = "Название Фильма:", Background = backgraung, HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
+                var yearLable = new Label() { Content = "Год:", Background = backgraung, Margin = new Thickness(120, 0, 0, 0), HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
+                var countryLable = new Label() { Content = "Страна:", Background = backgraung, Margin = new Thickness(120, 0, 0, 0), HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
+                var genreLable = new Label() { Content = "Жанр:", Background = backgraung, Margin = new Thickness(120, 0, 0, 0), HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
+                var directorLable = new Label() { Content = "Режисер:", Background = backgraung, Margin = new Thickness(120, 0, 0, 0), HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
+                var actorsLable = new Label() { Content = "В ролях:", Background = backgraung, Margin = new Thickness(120, 0, 0, 0), HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
+                var timesLable = new Label() { Content = "Длительность:", Background = backgraung, Margin = new Thickness(120, 0, 0, 0), HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
+                var aboutLable = new Label() { Content = "Про фильм:", Background = backgraung, Margin = new Thickness(120, 0, 0, 0), HorizontalAlignment = HorizontalAlignment.Left, Foreground = foregraung };
+                nameLable.MouseLeftButtonDown += Label_MouseDown_Watch1;
 
                 grid.Children.Add(nameLable);
                 grid.Children.Add(yearLable);
@@ -92,7 +99,7 @@ namespace MyFilm.Pages
                 grid.Children.Add(timesLable);
                 grid.Children.Add(aboutLable);
 
-                Grid.SetRow(nameLable,0);
+                Grid.SetRow(nameLable, 0);
                 Grid.SetRow(yearLable, 1);
                 Grid.SetRow(countryLable, 2);
                 Grid.SetRow(genreLable, 3);

@@ -33,7 +33,18 @@ namespace MyFilm.Pages
 
         private async void Button_Click_Next(object sender, RoutedEventArgs e)
         {
-            var movie = _context.Movies.Add(new Movie() { FilmName = namefilmtext.Text, FilmYear = yearfilmtext.Text, FilmCountry = countryfilmtext.Text, FilmGenre = genrefilmtext.Text, FilmDirector = directorfilmtext.Text, FilmActor = actorfilmtext.Text, FilmTime = timefilmtext.Text, FilmAbout = aboutfilmtext.Text });
+            var muvie = new Movie();
+            muvie.FilmAbout = aboutfilmtext.Text;
+            muvie.FilmActor = actorfilmtext.Text;
+            muvie.FilmCountry = countryfilmtext.Text;
+            muvie.FilmDirector = directorfilmtext.Text;
+            muvie.FilmGenre = genrefilmtext.Text;
+            muvie.FilmImage = imagePath;
+            muvie.FilmPath = pathfilmtext.Text;
+            muvie.FilmTime = timefilmtext.Text;
+            muvie.FilmYear = yearfilmtext.Text;
+
+            _context.Movies.Add(muvie);
             await _context.SaveChangesAsync();
             NavigationService.Navigate(new Uri("Pages/ViewPage.xaml", UriKind.Relative));
         }
@@ -55,21 +66,5 @@ namespace MyFilm.Pages
 
         }
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-            var muvie = new Movie();
-            muvie.FilmAbout = aboutfilmtext.Text;
-            muvie.FilmActor = actorfilmtext.Text;
-            muvie.FilmCountry = countryfilmtext.Text;
-            muvie.FilmDirector = directorfilmtext.Text;
-            muvie.FilmGenre = genrefilmtext.Text;
-            muvie.FilmImage = imagePath;
-            muvie.FilmPath = pathfilmtext.Text;
-            muvie.FilmTime = timefilmtext.Text;
-            muvie.FilmYear = yearfilmtext.Text;
-
-            _context.Movies.Add(muvie);
-            _context.SaveChanges();
-        }
     }
 }
