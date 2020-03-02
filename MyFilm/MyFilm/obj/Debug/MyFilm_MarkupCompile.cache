@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Проэкты\Films\MyFilm\MyFilm\obj\Debug\
+C:\Users\student.ITSTEP1\Source\Repos\Film\MyFilm\MyFilm\obj\Debug\
 MyFilm
 none
 false
 DEBUG;TRACE
-D:\Проэкты\Films\MyFilm\MyFilm\App.xaml
+C:\Users\student.ITSTEP1\Source\Repos\Film\MyFilm\MyFilm\App.xaml
 82062519700
 
 15-1052099387
-181605229343
+18-1796491765
 MainWindow.xaml;Pages\AddFilmPage.xaml;Pages\FullViewPage.xaml;Pages\MoviePage.xaml;Pages\RecoveryPage.xaml;Pages\RegistrPage.xaml;Pages\StartPage.xaml;Pages\ViewPage.xaml;
 
 False
