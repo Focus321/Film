@@ -157,8 +157,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Image\" />
     <Folder Include="Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\AudiA7.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

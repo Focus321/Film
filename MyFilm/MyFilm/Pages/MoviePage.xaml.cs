@@ -27,7 +27,7 @@ namespace MyFilm.Pages
 
         private void Image_MouseDown_Play(object sender, MouseButtonEventArgs e)
         {
-            player.Source = new Uri("https://cv1.pikabu.ru/video/2020/02/29/1582988629288971570_720x404.mp4");
+            player.Source = new Uri("http://www.onirikal.com/videos/mp4/audi_a7.mp4");
             player.LoadedBehavior = MediaState.Manual;
             player.Play();
 
@@ -36,16 +36,6 @@ namespace MyFilm.Pages
         private void Button_Click_Back(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Uri("Pages/ViewPage.xaml", UriKind.Relative));
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //  player.Source = new Uri("http://www.onirikal.com/videos/mp4/audi_a7.mp4");
-
-
-            //fullViewMedia.Source = new Uri("http://www.onirikal.com/videos/mp4/audi_a7.mp4");
-
-            //fullViewMedia.Visibility = Visibility.Visible;
         }
     }
 }
